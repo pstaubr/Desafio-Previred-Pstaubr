@@ -1,0 +1,97 @@
+{
+	"info": {
+		"_postman_id": "2d0d0684-852d-4170-b34f-0cf825080803",
+		"name": "Desafío Previred - Pstaubr",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41762433"
+	},
+	"item": [
+		{
+			"name": "Crear empleados",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nombre\": \"Ana\",\n    \"apellido\": \"Gómez\",\n    \"rut\": \"17365367-0\",\n    \"cargo\": \"Desarrolladora\",\n    \"salario\": 600000,\n    \"bonos\": 100000,\n    \"descuentos\": 50000\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/previred-desafio-pstaubr/api/empleados",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"previred-desafio-pstaubr",
+						"api",
+						"empleados"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener todos los empleados",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/previred-desafio-pstaubr/api/empleados",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"previred-desafio-pstaubr",
+						"api",
+						"empleados"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar empleado por id",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/previred-desafio-pstaubr/api/empleados?id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"previred-desafio-pstaubr",
+						"api",
+						"empleados"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

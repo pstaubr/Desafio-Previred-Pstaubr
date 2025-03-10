@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gestión de Empleados</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <h1>Gesti&oacute;n de Empleados Desaf&iacute;o Previred - Pstaubr</h1>
+
+    <form class="form-empleado" id="empleadoForm">
+        <div class="form-group">
+            <label for="nombre">Nombre:</label>
+            <input id="nombre" name="nombre" type="text">
+            <span class="error" id="nombreError"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="apellido">Apellido:</label>
+            <input id="apellido" name="apellido" type="text">
+            <span class="error" id="apellidoError"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="rut">RUT:</label>
+            <input id="rut" name="rut" type="text">
+            <span class="error" id="rutError"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="cargo">Cargo:</label>
+            <input id="cargo" name="cargo" type="text">
+            <span class="error" id="cargoError"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="salario">Salario:</label>
+            <input id="salario" name="salario" oninput="formatoMiles(this)" type="text">
+            <span class="error" id="salarioError"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="bonos">Bonos:</label>
+            <input id="bonos" name="bonos" oninput="formatoMiles(this)" type="text">
+            <span class="error" id="bonosError"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="descuentos">Descuentos:</label>
+            <input id="descuentos" name="descuentos" oninput="formatoMiles(this)" type="text">
+            <span class="error" id="descuentosError"></span>
+        </div>
+
+        <button class="btn btn-primary" id="enviarBtn" type="button">Enviar</button>
+    </form>
+
+    <h2>Lista de Empleados</h2>
+    <table class="table-empleados" id="empleadosTable">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>RUT</th>
+            <th>Cargo</th>
+            <th>Salario</th>
+            <th>Bonos</th>
+            <th>Descuentos</th>
+            <th>Acciones</th>
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <p class="centrado" id="mensajeSinRegistros">Actualmente no existen registros.</p>
+    <a href="nomina.html">Ir a la N&oacute;mina</a>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

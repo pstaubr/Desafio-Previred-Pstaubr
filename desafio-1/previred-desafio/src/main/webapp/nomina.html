@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>C&aacute;lculo de N&oacute;mina</title>
+    <link href="styleNomina.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <h1>C&aacute;lculo de N&oacute;mina</h1>
+
+    <form enctype="multipart/form-data" id="uploadForm">
+        <div class="form-group">
+            <label for="csvFile">Seleccionar archivo CSV:</label>
+            <input accept=".csv" id="csvFile" name="csvFile" type="file">
+        </div>
+        <button class="btn btn-primary" id="uploadButton" type="button">Subir y Calcular</button>
+    </form>
+
+    <div id="loadingMessage" style="display: none; color: red;">Cargando...</div>
+    <h2>Resultados de N&oacute;mina</h2>
+    <table id="resultsTable">
+        <thead>
+        <tr>
+            <th>RUT</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Cargo</th>
+            <th>Salario Base</th>
+            <th>Bonos</th>
+            <th>Descuentos</th>
+            <th>Salario Final</th>
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <div id="paginacion"></div>
+    <p class="centrado" id="mensajeSinRegistros" style="display: none;">No se encontraron registros.</p>
+    <a href="index.html">Volver a la Gesti&oacute;n de Empleados</a>
+</div>
+
+<script src="nomina.js"></script>
+
+</body>
+</html>
